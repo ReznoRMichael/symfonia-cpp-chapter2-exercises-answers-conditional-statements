@@ -1,0 +1,76 @@
+I. Instrukcje sterujące to przydatne polecenia służące do sterowania przebiegiem programu - podejmowania decyzji o wykonywaniu tego czy innego fragmentu kodu.
+
+II. Wartością wyrażenia (y < 0) może być prawda lub fałsz w zależności od wartości y.
+
+III. Zamiast wyrażenia logicznego można postawić zmienną typu całkowitego int. Wartością będzie prawda lub fałsz, w zależności czy zmienna jest różna od zera bądź równa zero.
+
+IV. 
+a) if(a < 6) = poprawne
+b) if(a) = poprawne
+c) if(a + 2) = poprawne
+d) if( (a + 7) < (10 - 2) ) = poprawne
+e) if( (a + a) > (a - 4) ) = poprawne
+
+V.
+if(warunek1)
+{
+	if(warunek2) jakas instrukcja;
+	if(warunek3) jakas instrukcja;
+	else jakas instrukcja; = warunek3
+}
+else jakas instrukcja; = warunek1
+if(warunek4)
+if(warunek5) jakas instrukcja;
+else jakas instrukcja; = warunek5
+
+VI. Pętla programowa polega na tym, że pewna instrukcja lub blok instrukcji wykonywane są w kółko, dopóki spełniony jest jakiś warunek.
+
+VII. Mogą sprawić, że zawarte w nich instrukcje nie będą wcale wykonane: if, while, switch
+
+VIII. Zasadnicza różnica między pętlą while a do-while: w pętli do-while pierwsza instrukcja wykona się zawsze przynajmniej raz. Z różnicy tej wynika, że w pętli do-while częściej można popełnić jakiś błąd, dlatego początkującym programistom zaleca się korzystanie z pętli while.
+
+IX. W instrukcji for warunek sprawdzany jest przed obiegiem każdej pętli.
+
+X. Instrukcja kroku pętli for jest wykonywana na koniec pętli - bezpośrednio przed sprawdzeniem warunku.
+
+XI. Przykłady realizacji nieskończonej pętli:
+for( ; ; )
+while(true)
+do ...
+while(1)
+
+XII. Dwa sposoby zakończenia nieskończonej pętli i przejście do wykonywania kolejnych instrukcji:
+1. while(1)
+	{
+		if(jakis warunek) break;
+	}
+2. goto;
+
+XIII. Instrukcja goto może zakończyć obieg nieskończonej pętli i przejść do o wiele dalszych instrukcji, a nawet takich poprzedzających ją.
+
+XIV. Różnica pomiędzy obiektem zdefiniowanym w wyrażeniu inicjalizacyjnym a takim powyżej, jest taka, że pierwszy istnieje jedynie na czas obiegu pętli, a drugi w zakresie obowiązującej ważności bloku w którym został zdefiniowany.
+
+XV. Instrukcja switch jest niepoprawna - case 1 oraz case 5-4 to wyrażenia o identycznej wartości.
+
+XVI. Konsekwencje nie umieszczenia instrukcji break po instrukcjach case: zaczną się wykonywać instrukcje umieszczone pod następną etykietą case.
+
+XVII. Trzy aspekty w których wybór wielowariantowy przy użyciu switch lub if...else się różnią:
+1. switch - typ wybierający (warunek) powinien być typu całkowitego int (albo takiego, który kompilator potrafi sobie na taki typ całkowity zmienić) (else-if nie ma to znaczenia)
+2. switch - typ wybierający porównywany jest z wartościami stałymi (nie zmiennymi)
+3. switch - porównanie to sprawdzenie czy obiekt wybierający jest równy jakiejś wartości, przy else-if porównanie może być dowolnym wyrażeniem dającym odpowiedź prawda/fałsz
+
+XVIII. Tak, można się posłużyć instrukcją switch (typ całkowity, stałe wartości, reszta załatwi default)
+
+XIX. Nie można się posłużyć instrukcją switch, gdyż warunkiem jest wyrażenie x > 12, a nie stała wartość.
+
+XX. Nie można się posłużyć instrukcją switch, gdyż warunki są obliczane dla zmiennych wyrażeń.
+
+XXI. Instrukcja break wyskakuje z pętli. W przypadku zagnieżdżonych pętli przerywa pętlę w której się znajduje.
+
+XXII. Z wielokrotnie zagnieżdżonych pętli można wyskoczyć instrukcją goto.
+
+XXIII. Etykieta to oznaczenie miejsca w programie (nazwa i dwukropek) do którego potem można przeskoczyć np. instrukcją goto.
+
+XXIV. Instrukcja continue w pętlach powoduje zaniechanie wykonywania dalszych instrukcji w pętli, ale nie przerywa jej.
+
+XXV. Jeśli w trakcie wykonywania pętli for napotkana zostanie instrukcja continue, to najpierw zostanie wykonana instrukcja krokowa, dopiero potem sprawdzenie warunku kolejnego obiegu pętli.
